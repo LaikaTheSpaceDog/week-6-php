@@ -2,12 +2,16 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
+// function squares ($arr) {
+//     $newArr = [];
+//     foreach ($arr as $val) {
+//         $newArr[] = $val * $val;
+//     }
+//     return $newArr;
+// }
+
 function squares ($arr) {
-    $newArr = [];
-    foreach ($arr as $val) {
-        $newArr[] = $val * $val;
-    }
-    return $newArr;
+    return collect($arr)->map(fn($n) => $n * $n)->all();
 }
 
 dump(
