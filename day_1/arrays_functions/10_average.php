@@ -2,8 +2,18 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
+// function average ($arr) {
+//     $sum = 0;
+//     $count = count($arr);
+//     foreach ($arr as $val) {
+//         $sum += $val;
+//     }
+//         return $sum / $count;
+// }
+
 function average ($arr) {
-    
+    $count = count($arr);
+    return collect($arr)->reduce(fn($acc, $val) => $acc + $val, 0) / $count;
 }
 
 dump(
