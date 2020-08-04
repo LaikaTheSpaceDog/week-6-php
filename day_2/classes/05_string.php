@@ -21,17 +21,19 @@ class Stringy
         return strtoupper($this->string);
     }
 
-    public function append($str)
+    public function append($appended)
     {
-        return "{$this->string}{$str}";
+        return "{$this->string}{$appended}";
     }
 
     public function repeat($num)
     {
         $rep = "";
+        
         for ($i = 0; $i < $num; $i += 1){
             $rep .= $this->string;
         }
+
         return $rep;
     }
 }
