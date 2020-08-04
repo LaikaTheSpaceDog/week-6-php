@@ -1,6 +1,7 @@
-Create a function, zOrQ, that returns true if the given string contains the letter q or z (uppercase and lowercase):
-
 <?php
+
+// Create a function, zOrQ, that returns true if the given string contains the letter q or z (uppercase and lowercase):
+
 
     require __DIR__ . "/vendor/autoload.php";
 

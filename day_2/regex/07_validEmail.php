@@ -1,9 +1,10 @@
-<!-- Create a function validEmail that takes a string, trims any whitespace at the beginning/end of the string 
-(using preg_replace) and then returns if the trimmed string is a valid email: -->
-
-<!-- Hint: you can use ( to group ) parts of a regex and | as or -->
-
 <?php
+
+// <!-- Create a function validEmail that takes a string, trims any whitespace at the beginning/end of the string 
+// (using preg_replace) and then returns if the trimmed string is a valid email: -->
+
+// <!-- Hint: you can use ( to group ) parts of a regex and | as or -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 

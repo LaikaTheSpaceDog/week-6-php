@@ -1,6 +1,7 @@
-<!-- Create a function, mi5, that returns true if the given string is 00 followed by a digit. Make sure it returns a boolean value: -->
-
 <?php
+
+// <!-- Create a function, mi5, that returns true if the given string is 00 followed by a digit. Make sure it returns a boolean value: -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 

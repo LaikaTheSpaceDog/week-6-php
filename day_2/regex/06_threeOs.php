@@ -1,6 +1,7 @@
-<!-- Create a function, threeOs, that returns true if a string contains three or more o or O characters in a row. -->
-
 <?php
+
+// <!-- Create a function, threeOs, that returns true if a string contains three or more o or O characters in a row. -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 

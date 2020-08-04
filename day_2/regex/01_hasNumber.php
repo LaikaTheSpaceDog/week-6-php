@@ -1,6 +1,7 @@
-<!-- Create a function hasNumber, that returns true if the given string contains a digit. -->
-
 <?php
+
+// <!-- Create a function hasNumber, that returns true if the given string contains a digit. -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 

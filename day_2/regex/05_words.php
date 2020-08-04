@@ -1,6 +1,7 @@
-<!-- Create a function, words, that splits a sentence into just words: -->
-
 <?php
+
+// <!-- Create a function, words, that splits a sentence into just words: -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 

@@ -1,6 +1,7 @@
-<!-- Create a function phoneNumber, that returns true if the given string contains only numbers and hyphens: -->
-
 <?php
+
+// <!-- Create a function phoneNumber, that returns true if the given string contains only numbers and hyphens: -->
+
 
 require __DIR__ . "/vendor/autoload.php";
 
