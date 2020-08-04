@@ -18,6 +18,7 @@ class Address
     public function fullAddress()
     {
         return "{$this->street}, {$this->postcode}, {$this->town}";
+        // could also use implode here - more flexible
     }
 
     public function setStreet($newStreet)

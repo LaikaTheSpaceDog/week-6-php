@@ -6,11 +6,6 @@ class LightSwitch
 {
     private $isOn = false;
 
-    public function __construct()
-    {
-
-    }
-
     public function isOn()
     {
         return $this->isOn;

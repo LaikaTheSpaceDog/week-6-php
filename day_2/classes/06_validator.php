@@ -6,8 +6,7 @@ class Validator
 {
    public function email($email)
    {
-    $valid = filter_var($email, FILTER_VALIDATE_EMAIL);
-    return $valid !== false;
+    return filter_var($email, FILTER_VALIDATE_EMAIL) === $email;
    }
 
    public function postcode($pcode)
