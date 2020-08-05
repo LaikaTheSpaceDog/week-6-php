@@ -24,16 +24,19 @@ class Address
     public function setStreet($newStreet)
     {
         $this->street = $newStreet;
+        return $this;
     }
 
     public function setPostcode($newPostcode)
     {
         $this->postcode = $newPostcode;
+        return $this;
     }
 
     public function setTown($newTown)
     {
         $this->town = $newTown;
+        return $this;
     }
 }
 
@@ -43,9 +46,9 @@ $address = new Address("1 Made Up Street", "BS4 8TR", "Bristol");
 dump($address->fullAddress()); // "1 Made Up Street, Bristol, BS4 8TR"
 
 // can update the street, postcode, and town
-$address->setStreet("12 Cantelope Way");
-$address->setPostcode("SW5 8RQ");
-$address->setTown("Swansea");
+$address->setStreet("12 Cantelope Way")
+        ->setPostcode("SW5 8RQ")
+        ->setTown("Swansea");
 
 // logs the new full address neatly
 dump($address->fullAddress()); // "12 Cantelope Way, Swansea, SW5 8RQ"

@@ -32,6 +32,7 @@ class Car
     public function addJourney($miles)
     {
         $this->mileage += $miles;
+        return $this;
     }
 }
 
@@ -44,8 +45,8 @@ dump($car->getMake()); // "Ford"
 dump($car->getMileage()); // 0
 
 // you can add journey
-$car->addJourney(100);
-dump($car->getMileage()); // 100
 
-$car->addJourney(200);
-dump($car->getMileage()); // 300
+dump($car->addJourney(100)
+         ->addJourney(200)
+         ->getMileage()
+        );
