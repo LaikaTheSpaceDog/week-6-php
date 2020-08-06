@@ -65,3 +65,18 @@ $shelf->addBook(new Book("The Catcher in the Rye", 277));
 $shelf->addBook(new Book("Stamped from the Beginning", 582));
 
 dump($shelf->titles()); // ["Zero: The Biography of a Dangerous Idea", "The Catcher in the Rye", "Stamped from the Beginning"]
+
+echo "\nQuestion 6:\n";
+
+use App\Library\Library;
+
+$badLibrary = new Library();
+$badLibrary->addShelf($shelf);
+
+$otherShelf = new Shelf();
+$otherShelf->addBook(new Book("The Power Broker", 1336));
+$otherShelf->addBook(new Book("Delusions of Gender", 338));
+
+$badLibrary->addShelf($otherShelf);
+
+dump($badLibrary->titles()); // ["Zero: The Biography of a Dangerous Idea", "The Catcher in the Rye", "Stamped from the Beginning", "The Power Broker", "Delusions of Gender"]
