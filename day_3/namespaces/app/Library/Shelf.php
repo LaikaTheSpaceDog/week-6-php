@@ -12,13 +12,13 @@ class Shelf
         $this->shelf = collect();
     }
     
-    public function addBook($book)
+    public function addBook(Book $book) : Shelf
     {
         $this->shelf[] = $book;
         return $this;
     }
 
-    public function titles()
+    public function titles() : array
     {
         return $this->shelf->map(fn($book) => $book->title())->all();
     }
