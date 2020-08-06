@@ -20,6 +20,6 @@ class Shelf
 
     public function titles()
     {
-        return $this->shelf->pluck("title")->all();
+        return $this->shelf->map(fn($book) => $book->title())->all();
     }
 }

@@ -4,8 +4,8 @@ namespace App\Library;
 
 class Book 
 {
-    public $title;
-    public $pages;
+    private $title;
+    private $pages;
     private $currentPage = 1;
 
     public function __construct($title, $pages)
@@ -23,6 +23,16 @@ class Book
     public function currentPage()
     {
         return $this->currentPage;
+    }
+
+    public function title()
+    {
+        return $this->title;
+    }
+
+    public function pages()
+    {
+        return $this->pages;
     }
 
 }
