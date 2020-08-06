@@ -4,11 +4,11 @@ namespace App\Library;
 
 class Book 
 {
-    private $title;
-    private $pages;
+    public $title;
+    public $pages;
     private $currentPage = 1;
 
-    public function __constructor($title, $pages)
+    public function __construct($title, $pages)
     {
         $this->title = $title;
         $this->pages = $pages;
