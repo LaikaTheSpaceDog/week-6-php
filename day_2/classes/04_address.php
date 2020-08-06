@@ -8,32 +8,32 @@ class Address
     private $postcode;
     private $town;
 
-    public function __construct($street, $postcode, $town)
+    public function __construct(string $street, string $postcode, string $town)
     {
         $this->street = $street;
         $this->postcode = $postcode;
         $this->town = $town;
     }
 
-    public function fullAddress()
+    public function fullAddress() : string
     {
         return "{$this->street}, {$this->postcode}, {$this->town}";
         // could also use implode here - more flexible
     }
 
-    public function setStreet($newStreet)
+    public function setStreet(string $newStreet) : Address
     {
         $this->street = $newStreet;
         return $this;
     }
 
-    public function setPostcode($newPostcode)
+    public function setPostcode(string $newPostcode) : Address
     {
         $this->postcode = $newPostcode;
         return $this;
     }
 
-    public function setTown($newTown)
+    public function setTown(string $newTown) : Address
     {
         $this->town = $newTown;
         return $this;

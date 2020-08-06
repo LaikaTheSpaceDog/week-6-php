@@ -13,12 +13,12 @@ class Phone
         $this->model = $model;
     }
 
-    public function model()
+    public function model() : string
     {
         return $this->model;
     }
 
-    public function make()
+    public function make() : string
     {
         return $this->make;
     }

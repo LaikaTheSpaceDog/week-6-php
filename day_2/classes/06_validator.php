@@ -4,12 +4,12 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Validator
 {
-   public function email($email)
+   public function email(string $email) : bool
    {
     return filter_var($email, FILTER_VALIDATE_EMAIL) === $email;
    }
 
-   public function postcode($pcode)
+   public function postcode(string $pcode) : bool
    {
     return preg_match("/^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s[0-9]{1}[A-Z]{2}$/", $pcode) === 1;
    }
