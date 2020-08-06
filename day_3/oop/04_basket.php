@@ -7,18 +7,19 @@ class Basket
     private $items = [];
     private $total = 0;
 
-    public function add($purchase)
+    public function add(BasketItem $purchase) : Basket
     {
         $this->total += $purchase->cost;
         $this->items[] = $purchase->item;
+        return $this;
     }
 
-    public function total()
+    public function total() : float
     {
         return $this->total;
     }
 
-    public function items()
+    public function items() : array
     {
         return $this->items;
     }
@@ -30,7 +31,7 @@ class BasketItem
     public $item;
     public $cost;
 
-    public function __construct($item, $cost)
+    public function __construct(string $item, float $cost)
     {
         $this->item = $item;
         $this->cost = $cost;

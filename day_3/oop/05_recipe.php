@@ -11,12 +11,12 @@ class Recipe
     private $dietList = [];
     private $amounts = [];
 
-    public function __constructor($name)
+    public function __constructor(string $name)
     {
         $this->name = $name;
     }
 
-    public function addIngredient($ingredient, $amount)
+    public function addIngredient(Ingredient $ingredient, float $amount)
     {
         $this->ingredients[] = $ingredient->name;
         $this->dietList[] = $ingredient->dietary;
@@ -24,22 +24,22 @@ class Recipe
         return $this;
     }
 
-    public function addMethod($string)
+    public function addMethod(string $string)
     {
 
     }
 
-    public function display()
+    public function display() : string
     {
         return $this->display;
     }
 
-    public function dietary()
+    public function dietary() : string
     {
         return $this->dietary;
     }
 
-    public function vegan()
+    public function vegan() : string
     {
 
     }
@@ -50,7 +50,7 @@ class Ingredient
     public $name;
     public $dietary;
 
-    public function __constructor($name, $dietary)
+    public function __constructor(string $name, string $dietary)
     {
         $this->name = $name;
         $this->dietary = $dietary;

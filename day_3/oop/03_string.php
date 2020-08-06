@@ -6,30 +6,30 @@ class StringyRedux
 {
     private $string;
 
-    public function __construct($string)
+    public function __construct(string $string)
     {
         $this->string = $string;
     }
 
-    public function lower()
+    public function lower() : StringyRedux
     {
         $this->string = strtolower($this->string);
         return $this;
     }
 
-    public function upper()
+    public function upper() : StringyRedux
     {
         $this->string = strtoupper($this->string);
         return $this;
     }
 
-    public function append($appended)
+    public function append(string $appended) : StringyRedux
     {
         $this->string .= $appended;
         return $this;
     }
 
-    public function repeat($num)
+    public function repeat(int $num) : StringyRedux
     {
         $rep = "";
         
@@ -40,7 +40,7 @@ class StringyRedux
         return $this;
     }
 
-    public function get()
+    public function get() : string
     {
         return $this->string;
     }
